@@ -4,7 +4,7 @@ import css from './Statistics.module.css';
 export const Statistics = ({ title, stats }) => {
   return (
     <section className={css.statistics}>
-      <h2 className={css.title}>{title && `${title}`}</h2>
+      {title && <h2 className={css.title}>{title}</h2>}
       <ul className={css.list}>
         {stats.map(stat => (
           <li className={css.item} key={stat.id}>
